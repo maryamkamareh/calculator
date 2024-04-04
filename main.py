@@ -1,30 +1,20 @@
-def calculator(num1,operator, num2):
-    def add_numbers(num1, num2):
-        return num1 + num2
-
-    def multiply_numbers(num1, num2):
-        return num1 * num2
-
-    def subtract_numbers(num1, num2):
-        return num1 - num2
-
-    def divided_numbers(num1, num2):
-        return num1 / num2
-
-    if operator == '+':
-        result = add_numbers(num1, num2)
-    elif operator == '*':
-        result = multiply_numbers(num1, num2)
-    elif operator == '-':
-        result = subtract_numbers(num1, num2)
-    elif operator == '/':
-        if num2 == 0:
-            print("Error: Division by zero")
-        else:
-            result = divided_numbers(num1, num2)
+num1 = float(input("Enter first number: "))
+user_input = input("Enter operation")
+num2 = float(input("Enter second number: "))
+if user_input == "+":
+    result = num1 + num2
+    print("Result: " + str(result))
+elif user_input == "-":
+    result = num1 - num2
+    print("Result: " + str(result))
+elif user_input == "*":
+    result = num1 * num2
+    print("Result: " + str(result))
+elif user_input == "/":
+    if num2 == 0:
+        print("Error: Division by zero")
     else:
-        print("Invalid operator!")
-        exit()
-    print(f"{num1} {operator} {num2} = {result}")
-
-calculator(7, "+", 4)
+        result = num1 / num2
+        print("Result: " + str(result))
+else:
+    print("Invalid input. Please try again.")
