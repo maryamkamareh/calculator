@@ -11,7 +11,7 @@ class cal():
         return self.num1 - self.num2
     def div (self):
         return self.num1 / self.num2
-user_input = input("input operation")
+user_input = input("input your operation")
 calculater = cal(float(user_input[0]), float(user_input[2]), user_input[1])
 if user_input[1] == "+":
     print(calculater.add())
