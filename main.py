@@ -1,3 +1,4 @@
+import re
 class cal():
     def __init__(self,num1, num2, operator):
         self.num1 = num1
@@ -12,13 +13,14 @@ class cal():
     def div (self):
         return self.num1 / self.num2
 user_in = input("input your operation")
-user_input = user_in.split()
-calculater = cal(float(user_input[0]), float(user_input[2]), user_input[1])
-if user_input[1] == "+":
+user_input = re.split(r'\+|\-|\*|\/', user_in)
+user_op = re.findall(r'[-+*/]', user_in)
+calculater = cal(float(user_input[0]), float(user_input[1]), user_op[0])
+if user_op[0] == "+":
     print(calculater.add())
-elif user_input[1] == "*":
+elif user_op[0] == "*":
     print(calculater.mul())
-elif user_input[1] == "-":
+elif user_op[0] == "-":
     print(calculater.sub())
-elif user_input[1] == "/":
+elif user_op[0] == "/":
     print(calculater.div())
