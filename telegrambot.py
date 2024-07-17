@@ -9,7 +9,7 @@ from requests.exceptions import ReadTimeout
 # تنظیمات logging
 logging.basicConfig(level=logging.INFO)
 
-bot = telebot.TeleBot("6703251131:AAEZ16FtXpPgONduJkas8hkK7WkEOzE3Tuo")
+bot = telebot.TeleBot("7497653283:AAG2sOOBuraSlz7attsr4QhCCSdCNe9ciF8")
 
 # متغیرهای وضعیت
 user_states = {}
